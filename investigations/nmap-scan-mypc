@@ -1,0 +1,40 @@
+# Investigation 003 - Windows Host Port Scan
+
+## Date
+2026-03-30
+
+## Objective
+Scan the Windows host machine from Kali Linux to identify
+open ports and assess potential attack surface.
+
+## Tool Used
+Nmap 7.98
+
+## Scan Command
+sudo nmap -sV 192.168.56.1
+
+## Open Ports Discovered
+| Port | Service | Version |
+|------|---------|---------|
+| 135/tcp | Windows RPC | Microsoft Windows RPC |
+| 139/tcp | NetBIOS | Microsoft Windows netbios-ssn |
+| 445/tcp | SMB | Microsoft-DS |
+| 5432/tcp | PostgreSQL | PostgreSQL DB 9.6.0+ |
+| 8000/tcp | HTTP | Uvicorn (Python) |
+
+## Risk Analysis
+- **Port 445 (SMB)** — High risk if internet facing. 
+  Exploited by WannaCry ransomware in 2017.
+- **Port 5432 (PostgreSQL)** — Database exposed on network.
+  Should be bound to localhost only.
+- **Port 8000 (Uvicorn)** — Python web server running.
+  Likely a development project.
+
+## Conclusion
+No immediate danger as these ports are only visible within
+the local VirtualBox network and not exposed to the internet.
+However in a real corporate environment ports 445 and 5432
+would require immediate attention and hardening.
+
+## Screenshot
+[nmap scan](../screenshots/nmap02.png)
