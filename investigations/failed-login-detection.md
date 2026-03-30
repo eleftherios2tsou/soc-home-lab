@@ -29,7 +29,7 @@ index=main "Failed password"
 ![Failed Login Detection](../screenshots/splunk.png)
 
 ## 📊 Splunk Dashboard Preview
-![SOC Dashboard](screenshots/Splunk_dashboard.png)
+![SOC Dashboard](../screenshots/Splunk_dashboard.png)
 
 ## Conclusion
 Multiple failed SSH login attempts from the same source IP 
