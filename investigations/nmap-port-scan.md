@@ -16,7 +16,7 @@ sudo nmap -sV localhost
 - 8194/tcp - HTTPS (Golang)
 
 ## Screenshot
-![Splunk Search] [../screenshots/nmap.png]
+![Splunk Search](../screenshots/nmap.png)
 
 ## Findings
 Four open ports discovered. SSH on port 22 is a common
