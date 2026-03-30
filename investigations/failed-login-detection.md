@@ -26,8 +26,7 @@ index=main "Failed password"
 - Time range: 10:30 - 10:31 AM
 
 ## Screenshot
-[Add Splunk screenshot here]
-
+![Failed Login Detection](../screenshots/splunk.png)
 ## Conclusion
 Multiple failed SSH login attempts from the same source IP 
 in a short time window is indicative of a brute force attack.
